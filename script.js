@@ -1,7 +1,22 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Load tasks from localStorage
+    // 페이지 로드 시 저장된 작업을 불러옵니다.
     loadTask('yeba');
     loadTask('panghui');
+
+    // 엔터 키 입력 이벤트를 추가합니다.
+    document.getElementById('yeba-input').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // 기본 동작을 방지합니다.
+            registerTask('yeba');
+        }
+    });
+
+    document.getElementById('panghui-input').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // 기본 동작을 방지합니다.
+            registerTask('panghui');
+        }
+    });
 });
 
 function registerTask(user) {
