@@ -4,5 +4,6 @@ function registerTask(user) {
     let inputValue = document.getElementById(inputId).value;
     if (inputValue.trim() !== "") {
         document.getElementById(taskId).innerText = inputValue;
+        document.getElementById(inputId).value = "";
     }
 }
