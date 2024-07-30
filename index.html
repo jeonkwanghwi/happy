@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>작업 등록 페이지</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <h2>예바의 할 일</h2>
+            <input type="text" id="yeba-input" placeholder="예바의 할 일 등록">
+            <button onclick="registerTask('yeba')">등록</button>
+            <div id="yeba-task" class="task-display"></div>
+        </div>
+        <div class="column">
+            <h2>팡휘의 할 일</h2>
+            <input type="text" id="panghui-input" placeholder="팡휘의 할 일 등록">
+            <button onclick="registerTask('panghui')">등록</button>
+            <div id="panghui-task" class="task-display"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
